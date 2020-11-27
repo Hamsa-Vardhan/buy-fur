@@ -61,31 +61,29 @@ html {
     padding-bottom: 1rem;
   }
   footer {
+    padding-bottom: 2rem;
+  }
+  footer > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  footer > div h3 {
-    position: relative;
-    border-radius: 1rem;
-  }
-  footer > div p {
-    margin: 3rem 1rem;
-  }
-  footer > div:first-child {
-    border: none;
-    border-bottom: 1px solid lightblue;
-  }
-  footer > div:last-child {
-    border: none;
-    border-top: 1px solid lightblue;
+  footer > div > p {
+    margin: auto 3rem;
+    color: black;
   }
 }
 
 body {
   min-height: 100vh;
-  max-width: 100vw;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -93,8 +91,7 @@ body header {
   position: fixed;
   z-index: 10000;
   top: 0px;
-  left: 0px;
-  right: 0px;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,7 +149,7 @@ body header h1 {
 }
 
 body header div.svg {
-  margin: 1.75rem 1rem;
+  margin: 1.75rem 3rem;
   width: 1.5rem;
   height: 1rem;
 }
@@ -170,7 +167,7 @@ body header div.svg:hover {
 
 body main {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,16 +248,48 @@ body main > div:last-child div.picture img {
 }
 
 body footer {
-  min-height: 50vh;
   width: 100vw;
+  min-height: 30vh;
   background-color: #062581;
   display: none;
 }
 
 body footer > div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
+  min-height: 30vh;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer > div h3 {
+  margin: 2rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: white linear-gradient(45deg, white 0%, lightblue 100%);
+  -webkit-box-shadow: 0px 0px 1.5rem rgba(173, 216, 230, 0.281);
+          box-shadow: 0px 0px 1.5rem rgba(173, 216, 230, 0.281);
+  color: #663399;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+body footer > div > p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 2rem;
+}
+
+body footer > div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,36 +303,36 @@ body footer > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0rem 2rem;
-  position: relative;
 }
 
-body footer > div:first-child {
-  border-right: 1px solid lightblue;
-}
-
-body footer > div:last-child {
-  border-left: 1px solid #add8e6;
-}
-
-body footer > div p {
+body footer > div > div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
   color: white;
-  font-size: 1rem;
 }
 
-body footer > div h3 {
-  color: #663399;
-  background: white linear-gradient(45deg, white 0%, lightblue 100%);
-  width: 5rem;
-  height: 5rem;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  position: absolute;
-  top: -2.5rem;
-  -webkit-box-shadow: 0px 0px 1.5rem #06258162;
-          box-shadow: 0px 0px 1.5rem #06258162;
+body footer > div > div a:hover {
+  text-decoration: underline;
+}
+
+body footer > div > div a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+body footer > div > div a p {
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 1rem;
 }
 
 @-webkit-keyframes add-image {
